@@ -1,22 +1,14 @@
 class Personaje(){
     val nombre:String = "Jack"
-
-
-
 }
-
-
-
 
 class Item(peso: Int= 0,valor: Int=0){
 
     var id=0
     var w = peso
     var v = valor
-
-
-
 }
+
 class Mochila(){
     val pesoMax=10
 }
@@ -24,32 +16,44 @@ class Mochila(){
 
 fun main() {
 
+    var peso:Int= 0
+    var valor:Int=0
+
     val num_objetos: Int = 4
+
+    val personaje1=Personaje();
 
 
     val objetos = arrayListOf<Item>()
 
-    println("ini de objetos")
+
 
     repeat(num_objetos) {
-        objetos.add(Item(0+it, 0+it))
+        peso=(1..10).random()
+        valor=(0..50).random()
+        objetos.add(Item(peso, valor))
         objetos[it].id=it;
     }
 
+    print("Objetos a robar por ")
+    println(personaje1.nombre)
+    repeat(num_objetos){
 
-    println("Objetos:")
-    print(objetos)
+        print("|peso:"+objetos[it].w)
+        print(" /valor:"+objetos[it].v)
+        println("|")
+
+    }
 
 
 
 
-    /*
-        val objeto1 = Item(5,10);
-        val objeto2 = Item(4,40)
-        val objeto3= Item(6,30)
-        val objeto4 = Item(4,50)
 
-*/
+
+
+
+
+
 
 
 
