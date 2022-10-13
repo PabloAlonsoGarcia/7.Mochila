@@ -1,5 +1,12 @@
 class Personaje(){
     val nombre:String = "Jack"
+
+
+
+    fun robar(objetos: ArrayList<Item>){
+
+
+    }
 }
 
 class Item(peso: Int= 0,valor: Int=0){
@@ -30,7 +37,7 @@ fun main() {
 
     repeat(num_objetos) {
         peso=(1..10).random()
-        valor=(0..50).random()
+        valor=(10..50).random()
         objetos.add(Item(peso, valor))
         objetos[it].id=it;
     }
@@ -44,6 +51,10 @@ fun main() {
         println("|")
 
     }
+
+
+
+
 
 
 
